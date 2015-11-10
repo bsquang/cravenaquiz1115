@@ -1,4 +1,4 @@
-var current = 1;
+var current = 3;
 var game = 0;
 var cate;
 var checkGameState = false;
