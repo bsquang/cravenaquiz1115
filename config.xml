@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.bsq.lamhonggame2"
+        id          = "com.cherry.saigonchat2015"
         versionCode = "10" 
         version     = "1.0.0" >
 
     <!-- versionCode is optional and Android only -->
 
-    <name>BRUFENGAME</name>
+    <name>SAIGONCHAT2015</name>
 
     <description>
-        BRUFEN
+        SAIGONCHAT2015
     </description>
 
-    <author href="http://www.cherryvietnam.com" email="thisisacherryvn@gmail.com">
+    <author href="http://www.cherryvietnam.com" email="thisisacherryvn3@gmail.com">
         bsq
     </author>
 	
