@@ -54,8 +54,14 @@ body, html, input, textarea{
   
   z-index: 1;
 }
-
-.next_btn, .next_btn1 {
+.animated {
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  -ms-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+}
+.next_btn, .next_btn1, .btnClear {
     position: absolute;
     z-index: 2;
     line-height: 42px;
@@ -70,7 +76,21 @@ body, html, input, textarea{
     cursor: pointer;
     font-size: 24px;
 }
+.btnClear {
+  position: initial;
+  padding: 10px 30px;
+  width: 200px;
+  height: 65px;
+  margin: 0px auto;
 
+}
+.next_btn:active, .next_btn1:active {
+  -webkit-transform: scale(0.7, 0.7);
+  -moz-transform: scale(0.7, 0.7);
+  -o-transform: scale(0.7, 0.7);
+  -ms-transform: scale(0.7, 0.7);
+  transform: scale(0.7, 0.7);
+}
 .next_btn1{
   display: none;
 }
@@ -133,6 +153,12 @@ body, html, input, textarea{
 }
 .rad_answer:active {
   background: url(../img/btnSelected_1024.png) no-repeat top center;
+}
+.rad_answer.true {
+  background: url(../img/BTN-RIGHT.png) no-repeat top center;  
+}
+.rad_answer.false {
+  background: url(../img/BTN-WRONG.png) no-repeat top center;  
 }
 .rad_answer p{
   display: inline-block;
@@ -197,9 +223,22 @@ div[page-id="4"] {
   background: transparent url(../img/contentBackground_1024.jpg) no-repeat center center;
   background-size: cover;
 }
-div[page-id="5"], div[page-id="7"] {
+div[page-id="5"], div[page-id="7"], div[page-id="8"] {
   background: transparent url(../img/sence01.jpg) no-repeat center center;
   background-size: cover;
   padding: 220px 10px;
 }
 #true_answer, #congrat {text-align: center;line-height: 76px; font-size: 46px;}
+.btnTransparent {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+}
+#openPanelBtn {
+  right: 0px;
+  top: 0px;
+}
+#resetBtn {
+  left: 0px;
+  bottom: 0px;
+}

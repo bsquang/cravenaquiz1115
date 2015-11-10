@@ -6,7 +6,6 @@
       <meta name="viewport" content="initial-scale=1, user-scalable=no">
         
       <link rel="stylesheet" type="text/css" href="css/style.css">  
-      <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">  
       <link rel="stylesheet" type="text/css" href="fonts/fonts.css">  
       
       <script src="js/jquery-1-11-2.min.js"></script>
@@ -15,23 +14,23 @@
    <body>
       <div class="wrapper">
          <div class="page" page-id="1"  style='display: block'>
-            <div class="next_btn" onclick="nextBUTTON()">NEXT</div>
+            <div class="animated next_btn" onclick="nextBUTTON()">NEXT</div>
          </div>
          <div class="page" page-id="2"  style='display: block'>
-            <div class="next_btn" onclick="nextBUTTON()">NEXT</div>
+            <div class="animated next_btn" onclick="nextBUTTON()">NEXT</div>
          </div>
          <div class="page" page-id="3">
-            <div class="next_btn" onclick="nextBUTTON()">NEXT</div>
+            <div class="animated next_btn" onclick="nextBUTTON()">NEXT</div>
          </div>
          <div class="page" page-id="4">
-            <div class="next_btn" onclick="nextBUTTON()">NEXT</div>
+            <div class="animated next_btn" onclick="nextBUTTON()">NEXT</div>
             <!--<div class="next_btn1" onclick="nextQUESTION()">NEXT</div>-->
          </div>
          <div class="page" id="result" page-id="5">
             <h2>Kết Quả</h2>
             <p id="true_answer">Số câu bạn trả lời đúng:</p>
             <p id="congrat"></p>
-            <div class="next_btn" onclick="nextBUTTON()">NEXT</div>
+            <div class="animated next_btn" onclick="nextBUTTON()">NEXT</div>
          </div>
          <div class="page" id="customer_info" page-id="6">
             <h2>Nhập thông tin</h2>
@@ -41,15 +40,20 @@
                <input type="tel" id="phone" placeholder="Số điện thoại">
                <input type="email"id="email" placeholder="Email">
             </div>
-            <div class="next_btn" onclick="nextBUTTON()">NEXT</div>
+            <div class="animated next_btn" onclick="nextBUTTON()">NEXT</div>
          </div>
          <div class="page" id="thanks" page-id="7">
             <h2>Cảm ơn</h2>
          </div>
-         
+         <div class="page" id="thanks" page-id="8">
+            <h2>Số người đã chơi là 0</h2>
+            <div class="animated btnClear" onclick="clearData()">Xóa lượt chơi</div>
+         </div>
       </div>
+      <div class="btnTransparent" id="openPanelBtn" onclick="openHidenPanel()"></div>
+      <div class="btnTransparent" id="resetBtn" onclick="reset()"></div>
+      <script src="js/data.js"></script>
+      <script src="js/game.js"></script>
    </body>
 </html>
 
-<script src="data.js"></script>
-<script src="game.js"></script>
