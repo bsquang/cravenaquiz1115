@@ -11,6 +11,7 @@ var infoState = false;
 
 var question_quantity;
 var countToOpen = 0;
+var video = document.getElementById("bg_video");
 
 function checkEmail() {
     var reg = /^([\w\.])+@([a-zA-Z0-9\-])+\.([a-zA-Z]{2,4})(\.[a-zA-Z]{2,4})?$/;
@@ -34,7 +35,7 @@ function gotoPage(id){
   
 function nextBUTTON() {
     $(window).scrollTop(0);
-
+    video.pause();
     current += 1;
     if (current == 4) {
        checkState = true;
