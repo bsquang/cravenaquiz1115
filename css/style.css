@@ -237,10 +237,12 @@ div[page-id="5"], div[page-id="7"], div[page-id="8"] {
 #openPanelBtn {
   right: 0px;
   top: 0px;
+  z-index: 999;
 }
 #resetBtn {
   left: 0px;
   bottom: 0px;
+  z-index: 999;
 }
 video{
   position: absolute;
