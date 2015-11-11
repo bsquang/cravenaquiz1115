@@ -5,7 +5,7 @@ var title =
       'question':
       [
        {
-         'ques':'Một khu chợ đậm chất SG cổ kính, một biểu tượng của thành phố từ thời Pháp thuộc',
+         'ques':'Một khu chợ đậm chất Sài Gòn cổ kính, một biểu tượng của thành phố từ thời Pháp thuộc',
          'a':'Chợ Bà Chiểu',
          'b':'Chợ Bình Tây',
          'c':'Chợ Bến Thành',
@@ -38,10 +38,10 @@ var title =
         },
         {
          'ques':'Câu hát “Sài Gòn đẹp quá Sài Gòn ơi….” nằm trong bài hát nào về Sài Gòn thân thương?',
-         'a':'Đẹp lắm Sài Gòn',
+         'a':'Đẹp Lắm Sài Gòn',
          'b':'Sài Gòn Đẹp Lắm',
-         'c':'Sài Gòn trong tôi',
-         'd':'Tôi trong Sài Gòn',
+         'c':'Sài Gòn Trong Tôi',
+         'd':'Tôi Trong Sài Gòn',
          'true':'b',
         },
      ],
