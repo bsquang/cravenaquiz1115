@@ -51,7 +51,7 @@ var title =
      'question':
      [
         {
-         'ques':'Tên gọi thân thương người Sài Gòn dành cho những con đường Trần Huy Liệu, Trần Nhân Tôn, Nguyễn Thị Minh Khai.',
+         'ques':'Tên gọi thân thương người Sài Gòn dành cho những con đường Trần Huy Liệu, Trần Nhân Tông, Nguyễn Thị Minh Khai.',
          'a':'Phố đi bộ',
          'b':'Phố Tây',
          'c':'Phố sách cũ',
