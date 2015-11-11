@@ -98,10 +98,10 @@ var title =
      [
         {
          'ques':'Có một bài hát được nhạc sĩ Hà Okio sáng tác, nói về thức uống đậm chất Sài Gòn. Đó là bài hát nào?',
-         'a':'Sài Gòn cà phê sữa Đá',
-         'b':'Sài Gòn sữa Đá cà phê',
+         'a':'Sài Gòn cà phê sữa đá',
+         'b':'Sài Gòn sữa đá cà phê',
          'c':'Cà phê sữa đá Sài Gòn',
-         'd':'Phê Phê Sài Gòn sữa đá',
+         'd':'Cà phê Sài Gòn sữa đá',
          'true':'a',
         },
         {
@@ -109,7 +109,7 @@ var title =
          'a':'Tòa nhà Keangnam',
          'b':'Tòa nhà Time Square',
          'c':'Tòa nhà Bitexco',
-         'd':'Tòa nhà STC(Prudential)',
+         'd':'Tòa nhà STC (Prudential)',
          'true':'c',
         },
         {
