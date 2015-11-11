@@ -78,8 +78,8 @@ var title =
          'ques':'Ẩm thực đặc trưng chưa xa đã nhớ của Sài Gòn là món nào sau đây?',
          'a':'Bún đậu mắm tôm, bún chả, trà chanh',
          'b':'Cơm tấm, phở, cà phê sữa đá',
-         'c':'Bún Sứa, Nem nướng, Bún Cá Thu',
-         'd':'Cơm Hến, Bún hến, chè thập cẩm',
+         'c':'Bún Sứa, nem nướng, Bún Cá Thu',
+         'd':'Cơm Hến, bún hến, chè thập cẩm',
          'true':'b',
         },
         {
@@ -113,7 +113,7 @@ var title =
          'true':'c',
         },
         {
-         'ques':'Một vòng xoay (công trường) có đài phun nước, nối 3 đường Phạm Ngọc Thạch,Trần Cao Vân, Võ Văn Tần là',
+         'ques':'Một vòng xoay (công trường) có đài phun nước, nối 3 đường Phạm Ngọc Thạch, Trần Cao Vân, Võ Văn Tần là',
          'a':'Công xã Paris',
          'b':'Công trường Dân Chủ',
          'c':'Công trường Quốc Tế',
