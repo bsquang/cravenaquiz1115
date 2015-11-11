@@ -34,6 +34,7 @@ function gotoPage(id){
 }
   
 function nextBUTTON() {
+    play('touch');
     $(window).scrollTop(0);
     video.pause();
     current += 1;
@@ -43,8 +44,9 @@ function nextBUTTON() {
        $('.next_btn').hide();
     }
     if (current == 5) {
+        play('done');
        $('#true_answer').text('Số câu hỏi bạn trả lời đúng là: '+ trueAnswer+'/'+question_quantity);
-       if (trueAnswer == question_quantity) {
+       if ( (trueAnswer / question_quantity) >= 0.5 ) {
           $('#congrat').text('Chúc mừng bạn đã chiến thắng');
        }
        else{
@@ -91,6 +93,7 @@ function gotoGamePage(id){
 }
   
 function nextQUESTION() {
+   play('touch');
    $(window).scrollTop(0);
    $('.rad_answer i').hide();
    $('.next_btn1').hide();
@@ -149,10 +152,12 @@ function chooseAnswer() {
          var select = $(this).find('p').attr('istrue');
          
          if (select == "true") {   
+            play('correct');
             $(this).addClass('true');
             trueAnswer += 1;
          }
          else{
+            play('error');
             $(this).addClass('false');
             $(this).parents('.answer').find('.rad_answer p[istrue = "true"]').parent().addClass('true');
          }
@@ -216,7 +221,7 @@ function randTitle(min,max) {
 function letCountUser() {
   countUser = localStorage.getItem("countUser");
   if (countUser == null) {
-    countUser == 0;
+    countUser = 0;
   }
   localStorage.setItem('countUser', ++countUser);
 }
@@ -244,4 +249,14 @@ function clearData() {
     $(".page[page-id=8]").find("h2").text('Số người đã chơi là 0');
     localStorage.setItem('countUser', 0);
   }
+}
+
+var audioData = {
+  'correct': new Audio('audio/correct.mp3'),
+  'done': new Audio('audio/done.mp3'),
+  'error': new Audio('audio/error.mp3'),
+  'touch': new Audio('audio/touch.mp3'),
+}
+function play(name) {
+  audioData[name].play()
 }
