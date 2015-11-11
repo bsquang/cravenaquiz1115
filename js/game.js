@@ -13,6 +13,7 @@ var question_quantity;
 var countToOpen = 0;
 var countToReset = 0;
 var video = document.getElementById("bg_video");
+var ending_video = document.getElementById("ending_video");
 
 function checkEmail() {
     var reg = /^([\w\.])+@([a-zA-Z0-9\-])+\.([a-zA-Z]{2,4})(\.[a-zA-Z]{2,4})?$/;
@@ -39,6 +40,7 @@ function nextBUTTON() {
     play('touch');
     $(window).scrollTop(0);
     video.pause();
+    
     current += 1;
     if (current == 4) {
        checkState = true;
@@ -79,9 +81,7 @@ function nextBUTTON() {
            current = 6;
            return;
         }
-        setTimeout(function(){
-           window.location.reload();
-        },3000);
+        ending_video.play();
     }
     gotoPage(current);
 }
@@ -99,7 +99,7 @@ function nextQUESTION() {
    $(window).scrollTop(0);
    $('.rad_answer i').hide();
    $('.next_btn1').hide();
-   
+   $('.answer_box img').hide();
    game += 1;
    clicked = false;
    if (game == question_quantity) {
@@ -267,7 +267,6 @@ function play(name) {
     audioData[name].currentTime = 0;
     audioData[name].play()
 }
-//video.onended = function(e){
-//	current = 4;
-//	gotoPage(4);
-//}
+ending_video.onended = function(e){
+	window.location.reload();
+}
