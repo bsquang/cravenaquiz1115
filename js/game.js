@@ -263,9 +263,11 @@ var audioData = {
   'touch': new Audio('audio/touch.mp3'),
 }
 function play(name) {
-  audioData[name].play()
+    audioData[name].pause();
+    audioData[name].currentTime = 0;
+    audioData[name].play()
 }
-video.onended = function(e){
-	current = 4;
-	gotoPage(4);
-}
+//video.onended = function(e){
+//	current = 4;
+//	gotoPage(4);
+//}
