@@ -143,10 +143,22 @@ body, html, input, textarea{
   width: 87%;
   float: right;
 }
+.answer_box{
+  display: inline-block;
+  width: 50%;
+  height: 90px;
+  position: relative;
+}
+.answer_box img{
+  display: inline-block;
+  display: none;
+  position: absolute;
+  left: -30px;
+}
 .rad_answer{
   display: inline-block;
   padding: 20px 10px;
-  width: 50%;
+  width: 100%;
   height: 90px;  
   text-align: center;
   background: url(../img/btnNormal_1024.png) no-repeat top center;

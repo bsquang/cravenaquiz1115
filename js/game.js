@@ -11,6 +11,7 @@ var infoState = false;
 
 var question_quantity;
 var countToOpen = 0;
+var countToReset = 0;
 var video = document.getElementById("bg_video");
 
 function checkEmail() {
@@ -22,6 +23,7 @@ $(document).ready(function(){
   startgame();
   setInterval(function(){
     countToOpen = 0;
+	countToReset = 0;
   }, 3000);
 })
 
@@ -123,10 +125,10 @@ function addQuestion(num) {
       // tempDiv +='<h1>'+title[cate].category+'</h1><br>';
       tempDiv +='<div class="answer">';
       tempDiv +='<h2>'+(i+1)+'. '+title[cate].question[i].ques+'</h2><br/>';
-      tempDiv +='<div class="rad_answer"><p qs-id="a" '+ (title[cate].question[i].true == 'a' ? 'istrue="true"': 'istrue="false"') +'>'+title[cate].question[i].a+'</p></div>';
-      tempDiv +='<div class="rad_answer"><p qs-id="b" '+(title[cate].question[i].true == 'b' ? 'istrue="true"': 'istrue="false"')+'>'+title[cate].question[i].b+'</p></div>';
-      tempDiv +='<div class="rad_answer"><p qs-id="c" '+(title[cate].question[i].true == 'c' ? 'istrue="true"': 'istrue="false"')+'>'+title[cate].question[i].c+'</p></div>';
-      tempDiv +='<div class="rad_answer"><p qs-id="d" '+(title[cate].question[i].true == 'd' ? 'istrue="true"': 'istrue="false"')+'>'+title[cate].question[i].d+'</p></div>';
+      tempDiv +='<div class="answer_box"><img class="true" src="img/true.png"/><img class="wrong" src="img/wrong.png"/><div class="rad_answer"><p qs-id="a" '+ (title[cate].question[i].true == 'a' ? 'istrue="true"': 'istrue="false"') +'>'+title[cate].question[i].a+'</p></div></div>';
+      tempDiv +='<div class="answer_box"><img class="true" src="img/true.png"/><img class="wrong" src="img/wrong.png"/><div class="rad_answer"><p qs-id="b" '+ (title[cate].question[i].true == 'b' ? 'istrue="true"': 'istrue="false"') +'>'+title[cate].question[i].b+'</p></div></div>';
+      tempDiv +='<div class="answer_box"><img class="true" src="img/true.png"/><img class="wrong" src="img/wrong.png"/><div class="rad_answer"><p qs-id="c" '+ (title[cate].question[i].true == 'c' ? 'istrue="true"': 'istrue="false"' )+'>'+title[cate].question[i].c+'</p></div></div>';
+      tempDiv +='<div class="answer_box"><img class="true" src="img/true.png"/><img class="wrong" src="img/wrong.png"/><div class="rad_answer"><p qs-id="d" '+ (title[cate].question[i].true == 'd' ? 'istrue="true"': 'istrue="false"') +'>'+title[cate].question[i].d+'</p></div></div>';
       tempDiv +='</div>';
       tempDiv +='<div class="next_btn1 animated" onclick="nextQUESTION()">NEXT</div>';
       tempDiv +='</div>';
@@ -154,12 +156,15 @@ function chooseAnswer() {
          if (select == "true") {   
             play('correct');
             $(this).addClass('true');
+            $(this).parent().find('.true').fadeIn(300);
             trueAnswer += 1;
          }
          else{
             play('error');
             $(this).addClass('false');
+            $(this).parent().find('.wrong').fadeIn(300);
             $(this).parents('.answer').find('.rad_answer p[istrue = "true"]').parent().addClass('true');
+            $(this).parents('.answer').find('.rad_answer p[istrue = "true"]').parents('.answer_box').find('.true').fadeIn(300);
          }
       }
    })
@@ -227,11 +232,11 @@ function letCountUser() {
 }
 
 function reset() { 
-  if (countToOpen >= 2) {
+  if (countToReset >= 2) {
     window.location.reload();
-    countToOpen = 0;
+    countToReset = 0;
   }
-  countToOpen++;
+  countToReset++;
 }
 
 function openHidenPanel() {
@@ -259,4 +264,8 @@ var audioData = {
 }
 function play(name) {
   audioData[name].play()
+}
+video.onended = function(e){
+	current = 4;
+	gotoPage(4);
 }
