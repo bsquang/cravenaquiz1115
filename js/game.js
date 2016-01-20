@@ -13,7 +13,7 @@ var question_quantity;
 var countToOpen = 0;
 var countToReset = 0;
 var video = document.getElementById("bg_video");
-var ending_video = document.getElementById("ending_video");
+//var ending_video = document.getElementById("ending_video");
 
 function checkEmail() {
     var reg = /^([\w\.])+@([a-zA-Z0-9\-])+\.([a-zA-Z]{2,4})(\.[a-zA-Z]{2,4})?$/;
@@ -81,7 +81,8 @@ function nextBUTTON() {
            current = 6;
            return;
         }
-        ending_video.play();
+		window.location.reload();
+        //ending_video.play();
     }
     gotoPage(current);
 }
